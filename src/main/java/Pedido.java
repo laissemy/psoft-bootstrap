@@ -7,8 +7,8 @@ public class Pedido {
     private double peso;
     private Entrega entrega;
 
-    public Pedido(int cod, Cliente cliente, String origem, String destino,
-                  double peso, double distancia, Entrega entrega) {
+    public Pedido(int cod, Cliente cliente, String origem, String destino, double peso,
+                  double distancia, Entrega entrega) {
         this.cod = cod;
         this.cliente = cliente;
         this.origem = origem;
@@ -20,6 +20,10 @@ public class Pedido {
 
     public int getCod() {
         return this.cod;
+    }
+
+    public Cliente getCliente() {
+        return this.cliente;
     }
 
     public String getOrigem() {
@@ -56,7 +60,7 @@ public class Pedido {
 
     @Override
     public String toString() {
-        return "Pedido #" + cod + " | " + cliente + " | " + origem + " -> " + destino
+        return "Pedido #" + cod + " | " + cliente.getNome() + " | " + origem + " -> " + destino
              + " | " + entrega.getNome()
              + " | R$ " + String.format("%.2f", getValor())
              + " | " + getPrazo() + " dias";

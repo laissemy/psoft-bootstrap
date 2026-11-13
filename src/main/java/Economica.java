@@ -15,5 +15,7 @@ public class Economica implements Entrega {
     }
 
     @Override
-    public String getNome() { return nome; }
+    public String getNome() { 
+        return nome; 
+    }
 }

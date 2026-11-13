@@ -18,5 +18,7 @@ public class Expressa implements Entrega {
     }
 
     @Override
-    public String getNome() { return nome; }
+    public String getNome() { 
+        return nome; 
+    }
 }
